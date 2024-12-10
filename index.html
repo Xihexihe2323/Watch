@@ -5,40 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embed YouTube Video Example</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Resetting default margin and padding */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradasi biru yang menarik */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-        }
-        .container {
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
+
+        /* Container for video and title */
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
         iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
             border: none;
         }
-        h1 {
-            color: #333;
+
+        /* Button Style */
+        .play-button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #fff;
+            color: #0072ff;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-        p {
-            color: #666;
+
+        .play-button:hover {
+            background-color: #0072ff;
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Watch the Video</h1>
-        <p>This is the embedded YouTube video. Enjoy!</p>
+        <h1>Watch the Exciting Video!</h1>
+        <p>Enjoy this great content on YouTube, embedded directly into our page.</p>
         
         <!-- Embed YouTube Video -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2nAkNccQQo" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Q2nAkNccQQo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- Button to YouTube -->
+        <div>
+            <a href="https://youtu.be/Q2nAkNccQQo" class="play-button" target="_blank">Watch on YouTube</a>
+        </div>
     </div>
 
 </body>

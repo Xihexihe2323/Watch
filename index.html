@@ -23,6 +23,7 @@
             color: #ecf0f1; /* Lighter text color for contrast */
             padding: 20px;
             text-align: center;
+            position: relative; /* Allow for absolute positioning of video */
         }
 
         /* Container for video and title */
@@ -48,12 +49,16 @@
             color: #bdc3c7; /* Slightly muted text for description */
         }
 
+        /* Embed YouTube video with a larger size */
         iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
+            position: fixed; /* Fixed position on the screen */
+            bottom: 20px; /* 20px from the bottom */
+            right: 20px; /* 20px from the right */
+            width: 40vw; /* 40% of the viewport width */
+            height: 22.5vh; /* Adjust height accordingly to maintain 16:9 ratio */
             border-radius: 10px;
             border: none;
+            z-index: 10; /* Ensure it appears above other content */
         }
 
         /* Button Style */
@@ -95,14 +100,14 @@
         <h1>Watch the Exciting Video!</h1>
         <p>Enjoy this great content on YouTube.</p>
         
-        <!-- Embed YouTube Video -->
-        <iframe src="https://www.youtube.com/embed/Q2nAkNccQQo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
         <!-- Button to YouTube -->
         <div>
             <a href="https://youtu.be/Q2nAkNccQQo" class="play-button" target="_blank">Watch on YouTube</a>
         </div>
     </div>
+
+    <!-- Embed YouTube Video -->
+    <iframe src="https://www.youtube.com/embed/Q2nAkNccQQo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </body>
 </html>
